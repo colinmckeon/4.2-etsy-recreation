@@ -24,6 +24,9 @@ HEADER
       </div>
     </div>
   </div>
+<!--************************************************
+NAVIGATION BAR
+************************************************ -->
 
   <div class="row">
     <div class="col-md-12">
@@ -43,11 +46,27 @@ HEADER
 
 
 
+  <div class="col-md-10">
 
 
+    <div id="productContainer">
+      <!--TEMPLATE GOES IN HERE -->
+    </div>
 
 
+      <!--THIS IS THE STAMP -->
 
+      <script id="individualProduct" type="text/x-handlebars-template">
+        <div class="col-md-3">
+
+          <img src="{{Images.0.url_75x75}}" alt="" />
+          <h6>{{title}}</h6>
+          <h6>{{price}}</h6>
+          <h6>{{Shop.shop_name}}</h6>
+
+        </div>
+      </script>
+</div>
 
 
     <script src="js/bundle.js"></script>

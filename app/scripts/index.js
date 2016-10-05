@@ -2,8 +2,8 @@
 // // alert ("colin");
 //
 //
-// var $ = require('jquery');
-// var handlebars = require("handlebars");
+var $ = require('jquery');
+var Handlebars = require("handlebars");
 //
 //
 // var source = $('#id').html();
@@ -44,11 +44,30 @@ JSON
 ************************************************/
 var url = 'https://api.etsy.com/v2/listings/active.js?api_key=cdwxq4soa7q4zuavbtynj8wx&keywords=golf&includes=Images,Shop&sort_on=score';
 
-function displayProducts(data) {
+fetchJSONP(url, run);
+
+function run(data) {
+  var golfItems = data.results;
   console.log(data);
+  listGolfItems(golfItems)
 };
 
-fetchJSONP(url, displayProducts);
+function listGolfItems(loopItems){
+  var source = $('#individualProduct').html();
+  var template = Handlebars.compile(source);
+
+  loopItems.forEach(function(golfItem){
+
+    var productHTML = $(template(golfItem));
+    $('#productContainer').append(productHTML);
+
+  });
+
+
+};
+
+
+
 /************************************************
 JSON ^^^^^^^^^
 ************************************************/
