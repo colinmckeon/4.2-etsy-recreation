@@ -1,21 +1,20 @@
 // //
 // // alert ("colin");
-//
-//
+
+
 var $ = require('jquery');
 var Handlebars = require("handlebars");
-//
-//
+
+
+
+//NOTES
 // var source = $('#id').html();
 // var template = handlebars.compile(source);
-//
-//
 //
 // //use .append instead of html to continue stamping, otherwise .html will replace the first
 // $('#id').html(template());
 // $('#id').append(template());
-//
-//
+//NOTES^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 
@@ -54,24 +53,17 @@ function run(data) {
 
 function listGolfItems(loopItems){
   var source = $('#individualProduct').html();
+
   var template = Handlebars.compile(source);
 
   loopItems.forEach(function(golfItem){
 
     var productHTML = $(template(golfItem));
+
     $('#productContainer').append(productHTML);
 
   });
-
-
 };
-
-
-
-/************************************************
-JSON ^^^^^^^^^
-************************************************/
-
 
 
 /*
