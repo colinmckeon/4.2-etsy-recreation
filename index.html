@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>4.2-etsy-recreation</title>
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+
+
+  <body>
+<div class="container">
+<!--************************************************
+HEADER
+************************************************ -->
+
+  <div class="row">
+    <div class="col-md-12">
+      <div>
+        <img src="images/logo.png" alt="Etsy Logo" id="etsy-logo"/>
+        <input type="button" value="Search">
+        <a href="#">Sell on Etsy</a>
+        <a href="#">Register</a>
+      </div>
+    </div>
+  </div>
+
+<!--************************************************
+NAVIGATION BAR
+************************************************ -->
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="nav-bar">
+        <a href="#">Clothing &amp; Accessories</a>
+        <a href="#">Jewelry</a>
+        <a href="#">Craft Supplies &amp; Tools</a>
+        <a href="#">Weddings</a>
+        <a href="#">Entertainment</a>
+        <a href="#">Home &amp; Living</a>
+        <a href="#">Kids &amp; Baby</a>
+        <a href="#">Vintage</a>
+      </div>
+    </div>
+  </div>
+
+<!--************************************************
+SIDEBAR
+************************************************ -->
+
+
+
+
+  <div class="row">
+    <div class="col-md-2">
+      <div class="sidebar">
+
+        <h5>Show results for:</h5>
+        <div class="categories">
+          <a href="#">Clothing</a> <br>
+          <a href="#">Home &amp; Living</a> <br>
+          <a href="#">Accessories</a> <br>
+          <a href="#">Art &amp; Collectibles</a> <br>
+          <a href="#">Jewelry</a> <br>
+          <a href="#">Craft Supplies &amp; Tools</a> <br>
+          <a href="#">Toys &amp; Games</a> <br>
+          <a href="#">Paper &amp; Party Supplies</a> <br>
+          <a href="#">Bags &amp; Purses</a> <br>
+          <a href="#">Weddings</a> <br>
+          <a href="#">Electronics &amp; Accessories</a> <br>
+          <a href="#">Bath &amp; Beauty</a> <br>
+          <a href="#">Books, Movies &amp; Music</a> <br>
+          <a href="#">Shoes</a> <br>
+          <a href="#">Pet Supplies</a>
+        </div> <!-- CATEGORIES DIV END-->
+
+        <h5>Refine your search</h5>
+        <div class="refineSearch">
+          <h5>Shop location</h5>
+
+        </div> <!-- REFINESEARCH DIV END -->
+
+      </div> <!-- SIDEBAR DIV END -->
+    </div> <!-- COL-MD-2 DIV END -->
+
+
+
+
+    <div class="col-md-10">
+      <div id="productContainer">
+        <!--TEMPLATE GOES HERE ----------------------------------->
+      </div>
+    </div> <!-- COL-MD-10 DIV END -->
+
+
+
+
+
+  </div> <!-- END OF ROW DIV -->
+
+
+
+
+
+
+
+<!--************************************************
+TEMPLATE
+************************************************ -->
+
+      <script id="individualProduct" type="text/x-handlebars-template">
+        <div class="col-md-3">
+
+          <img src="{{Images.0.url_75x75}}" alt="" id="imagesTemplate"/>
+          <h6 id="titleTemplate">{{title}}</h6>
+          <h6 id="shopTemplate">{{Shop.shop_name}}</h6>
+          <h6 id="priceTemplate">{{price}}</h6>
+
+        </div>
+      </script>
+
+</div> <!-- CONTAINER -->
+
+    <script src="js/bundle.js"></script>
+  </body>
+</html>
