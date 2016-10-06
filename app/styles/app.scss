@@ -21,7 +21,21 @@ img {
     height: auto;
 }
 
+#imagesTemplate{
+  height: 100%;
+  width: 100%;
+}
+
+#titleTemplate{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
 
 #priceTemplate{
   color: #78C042;
+}
+
+#shopTemplate{
+  color: #9A9A9A;
 }
