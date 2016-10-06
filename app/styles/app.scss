@@ -32,10 +32,12 @@ img {
   overflow: hidden;
 }
 
-#priceTemplate{
-  color: #78C042;
-}
-
 #shopTemplate{
   color: #9A9A9A;
+  display: inline-block;
+}
+
+#priceTemplate{
+  color: #78C042;
+  display: inline-block;
 }
